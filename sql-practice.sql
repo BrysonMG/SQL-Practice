@@ -42,17 +42,18 @@ Insert Into Artist (
 
 
 --Add to the Album table
-Insert into Album (
-	Title,
-	ReleaseDate,
-	AlbumLength,
-	Label,
-	ArtistId,
-	GenreId)
-	Values (
-	'Nightmare',
-	'07/27/2010',
-	3000,
-	'Warner Bros.',
-	28,
-	2);
+Insert into Album
+	(Title, ReleaseDate, AlbumLength, Label, ArtistId, GenreId) --Using Label is causing an error
+	Values
+		('Nightmare', '07/27/2010', 3000, 'Warner Bros.', 28, 2);
+
+
+--Add multiple entries to Song table
+Insert into Song
+	(Title, SongLength, ReleaseDate, GenreId, ArtistId, AlbumId)
+	Values 
+		('Welcome to the Family', 276, '07/27/2010', 2, 28, 23),
+		('Buried Alive', 328, '07/27/2010', 2, 28, 23),
+		('Natural Born Killer', 315, '07/27/2010', 2, 28, 23);
+
+
